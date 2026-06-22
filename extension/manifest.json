@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Watch Party",
+  "version": "1.0",
+  "permissions": ["activeTab"],
+  "host_permissions": ["http://localhost:3000/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["socket.io.js", "content.js"]
+    }
+  ]
+}
